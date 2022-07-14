@@ -3,9 +3,9 @@ import time
 
 class Mylib():
 
-    #python自带的__init__方法，在（非）main主方法下无须调用都可以执行
+    #python自带的__init__方法，在（非）main主方法下无须手工调用都可以执行
     def __init__(self):
-    #def qidong(self):
+    #def start_driver(self):
         #初始化浏览器对象
         self.driver = webdriver.Chrome()
         #窗口最大化
@@ -26,7 +26,8 @@ class Mylib():
         #涉及元素定位封装，要用return返回给函数，不然调用会报错；如果封装的是send_keys()，可以不返回
         return self.driver.find_element(locate_type,value)
 
-    #如果在（非）main主方法下不调用关闭浏览器的函数（方法），必须调用python自带的__def__方法，不然执行不了close()或quit()
+    #如果在（非）main主方法下不想手工调用自定义的关闭浏览器的函数（方法），可以使用python自带的__def__方法（自动调用），
+    # 不然执行不了close()或quit()
     def __del__(self):
     #def close(self):
         time.sleep(5)
@@ -34,10 +35,8 @@ class Mylib():
 
 if __name__ == '__main__':
     web = Mylib()
-    #web.qidong()
+    #web.start_driver()
     web.open_url('https://www.baidu.com')
-    el = web.locate_element('id','kw')
-    el.send_keys('itcast')
-    el_sub = web.locate_element('id','su')
-    el_sub.click()
+    web.locate_element('id','kw').send_keys('selenium')
+    web.locate_element('id','su').click()
     #web.close()
