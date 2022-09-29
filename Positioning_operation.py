@@ -1,6 +1,7 @@
 from selenium import webdriver
 import time
 
+#非单元测试，类的名字不要带有test字样，带有test右键执行会默认单元测试，执行报错
 class Mylib():
 
     #python自带的__init__方法，在（非）main主方法下无须手工调用都可以执行
@@ -40,3 +41,40 @@ if __name__ == '__main__':
     web.locate_element('id','kw').send_keys('selenium')
     web.locate_element('id','su').click()
     #web.close()
+
+
+# class Mylib(object):
+#
+#     def __init__(self):
+#         self.driver = webdriver.Chrome()
+#         self.driver.maximize_window()
+#
+#     def delay(self):
+#         self.driver.implicitly_wait(5)
+#
+#     def open_url(self, url):
+#
+#         self.driver.get(url)
+#         self.delay()
+#
+#     #元素定位
+#     def locate_element(self, locate_type, value):
+#         return self.driver.find_element_by_id(value)
+#
+#     def click_element(self, locate_type, value):
+#         #调用元素定位方法传参
+#         self.locate_element(locate_type, value).click()
+#
+#     def input_date(self, locate_type, value, data):
+#         #调用元素定位方法传参
+#         self.locate_element(locate_type, value).send_keys(data)
+#
+#     def __del__(self):
+#         time.sleep(5)
+#         self.driver.close()
+#
+# if __name__ == '__main__':
+#     web = Mylib()
+#     web.open_url('http://www.baidu.com')
+#     web.input_date('id', 'kw', 'selenium')
+#     web.click_element('id', 'su')
