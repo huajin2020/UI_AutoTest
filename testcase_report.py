@@ -14,9 +14,9 @@ dis = unittest.defaultTestLoader.discover(Testcase_dir,'ui_unittest_dome.py')
 #now=time.strftime("%Y-%m-%d %H_%M_%S")
 
 # 定义报告存放路径
-#filename = r"C:\Users\EDY\PycharmProjects\AutoTest\ui_test\ui_autotest_result.html"
+filename = r"C:\Users\EDY\PycharmProjects\AutoTest\ui_test\ui_autotest_result.html"
 #filename = "C:\\Users\\EDY\\PycharmProjects\\AutoTest\\ui_test\\"+now+"ui_autotest_result.html"
-filename="../ui_test/ui_autotest_result.html"
+#filename="../ui_test/ui_autotest_result.html"
 
 # 定义报告存放路径，如果没有，创建
 fp = open(filename, 'wb')
