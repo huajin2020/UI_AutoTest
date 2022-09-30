@@ -4,8 +4,8 @@ import time
 
 
 #文件路径
-#Testcase_dir = 'C:\\Users\\EDY\\PycharmProjects\\AutoTest\\ui_test'
-Testcase_dir="../ui_test"
+Testcase_dir = 'C:\\Users\\EDY\\PycharmProjects\\AutoTest\\ui_test'
+#Testcase_dir="../ui_test"
 
 #获取该文件路径下的文件
 dis = unittest.defaultTestLoader.discover(Testcase_dir,'ui_unittest_dome.py')
