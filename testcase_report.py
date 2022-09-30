@@ -2,7 +2,7 @@ import HTMLTestRunnerCN
 import unittest
 import time
 
-
+#此脚本对接了CI(jenkins)做自动化定时任务构建，读取文件地址不能用相对路径，只能用绝对路径，相对路径持续集成找不到文件
 #文件路径
 Testcase_dir = 'C:\\Users\\EDY\\PycharmProjects\\AutoTest\\ui_test'
 #Testcase_dir="../ui_test"
